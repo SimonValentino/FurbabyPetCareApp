@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.FurbabyPetCareApp" parent="Theme.Material3.DayNight.NoActionBar">
         <!--        Primary color settings-->
-        <item name="colorPrimary">@color/redPink</item>
+        <item name="colorPrimary">@color/red_pink</item>
 
         <!--        Secondary color settings-->
         <item name="colorSecondary">@color/cream</item>
