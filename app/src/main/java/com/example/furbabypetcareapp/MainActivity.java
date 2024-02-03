@@ -17,4 +17,8 @@ public class MainActivity extends AppCompatActivity {
     public void forgotPassword(View view) {
         // Code for forgetting password
     }
+
+    public void login(View view) {
+
+    }
 }
