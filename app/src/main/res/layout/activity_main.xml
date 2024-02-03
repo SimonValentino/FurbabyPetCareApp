@@ -78,7 +78,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
-                    android:drawableEnd="@drawable/check_icon"/>
+                    android:drawableEnd="@drawable/email_icon"/>
 
                 <View
                     android:layout_width="match_parent"
@@ -94,7 +94,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
-                    android:drawableEnd="@drawable/password_view_icon"/>
+                    android:drawableEnd="@drawable/password_icon"/>
 
                 <View
                     android:layout_width="match_parent"
