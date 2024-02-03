@@ -16,9 +16,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void forgotPassword(View view) {
         // Code for forgetting password
+        alert("Code for forgetting password");
     }
 
     public void login(View view) {
+        // Code for logging in
+        alert("Code for logging in");
+    }
 
+    private void alert(String message) {
+        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
     }
 }
