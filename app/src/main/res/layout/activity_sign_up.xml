@@ -119,7 +119,7 @@ android:background="#99E80078">
             android:textSize="20sp"
             android:clickable="true"
             android:focusable="true"
-            android:onClick="goToSignup" />
+            android:onClick="signUp" />
 
         <Button
             android:id="@+id/loginButton"
