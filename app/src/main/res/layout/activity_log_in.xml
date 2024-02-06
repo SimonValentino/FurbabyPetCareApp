@@ -7,7 +7,7 @@
 
     android:alpha="1"
     android:background="@drawable/login_bg"
-    tools:context=".MainActivity">
+    tools:context=".LogInActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -61,7 +61,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:alpha="0.8"
-                    android:text="Please login with your information" />
+                    android:text="Please log in with your information" />
 
                 <View
                     android:layout_width="match_parent"
@@ -71,7 +71,7 @@
                     android:id="@+id/textView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Email address"
+                    android:text="Email Address"
                     android:textStyle="bold" />
 
                 <EditText
@@ -136,13 +136,27 @@
                     android:layout_height="15dp" />
 
                 <Button
+                    android:id="@+id/loginButton"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:text="Login"
-                    android:textSize="20sp"
                     android:clickable="true"
                     android:focusable="true"
-                    android:onClick="login" />
+                    android:onClick="logIn"
+                    android:text="Log In"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <Button
+                    android:id="@+id/signUpButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="goToSignup"
+                    android:text="Sign Up"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent" />
 
                 <View
                     android:layout_width="match_parent"
