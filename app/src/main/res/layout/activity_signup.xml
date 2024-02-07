@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/signup_bg"
-    tools:context=".SignUpActivity">
+    tools:context=".SignupActivity">
 
 <androidx.constraintlayout.widget.ConstraintLayout
 android:layout_width="match_parent"
@@ -115,11 +115,11 @@ android:background="#99E80078">
             android:id="@+id/signUpButton"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="Sign Up"
+            android:text="Continue"
             android:textSize="20sp"
             android:clickable="true"
             android:focusable="true"
-            android:onClick="signUp" />
+            android:onClick="continueSignup" />
 
         <Button
             android:id="@+id/loginButton"
