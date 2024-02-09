@@ -1,6 +1,236 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#99E80078"
+    tools:context=".PetOwnerSignupActivity">
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/formCardView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="0dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="30dp">
+
+                <!-- Personal Information Fields -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Personal Information"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textColor="@color/red_pink"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editTextFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Full Name"
+                    android:inputType="textPersonName"
+                    android:layout_marginTop="48dp" />
+
+                <EditText
+                    android:id="@+id/editTextEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email Address"
+                    android:inputType="textEmailAddress"
+                    android:layout_marginTop="48dp" />
+
+                <EditText
+                    android:id="@+id/editTextContactPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Contact Phone Number"
+                    android:inputType="phone"
+                    android:layout_marginTop="48dp" />
+
+                <EditText
+                    android:id="@+id/editTextHomeAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Home Address"
+                    android:inputType="text"
+                    android:layout_marginTop="48dp" />
+
+                <EditText
+                    android:id="@+id/editTextCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="City"
+                    android:inputType="text"
+                    android:layout_marginTop="48dp" />
+
+                <EditText
+                    android:id="@+id/editTextStateProvince"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="State/Province"
+                    android:inputType="text"
+                    android:layout_marginTop="48dp" />
+
+                <EditText
+                    android:id="@+id/editTextZipPostalCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Zip/Postal Code"
+                    android:inputType="text"
+                    android:layout_marginTop="48dp" />
+
+                <!-- Pet Information Fields -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pet Information"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textColor="@color/red_pink"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="48dp" />
+
+                <EditText
+                    android:id="@+id/editTextPetsName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Pet’s Name(s)"
+                    android:inputType="text"
+                    android:layout_marginTop="48dp" />
+
+                <EditText
+                    android:id="@+id/editTextTypeOfPets"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Type(s) of Pet(s)"
+                    android:inputType="text"
+                    android:layout_marginTop="48dp" />
+
+                <EditText
+                    android:id="@+id/editTextBreeds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Breed(s) (if applicable)"
+                    android:inputType="text"
+                    android:layout_marginTop="48dp" />
+
+                <EditText
+                    android:id="@+id/editTextAges"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Age(s)"
+                    android:inputType="text"
+                    android:layout_marginTop="48dp" />
+
+                <EditText
+                    android:id="@+id/editTextSpecialNeeds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Special Needs/Requirements"
+                    android:inputType="text"
+                    android:layout_marginTop="48dp" />
+
+                <EditText
+                    android:id="@+id/editTextVaccinationDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Vaccination Details"
+                    android:inputType="text"
+                    android:layout_marginTop="48dp" />
+
+                <!-- Service Details Fields -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Service Details"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textColor="@color/red_pink"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="48dp" />
+
+                <EditText
+                    android:id="@+id/editTextTypeOfServiceNeeded"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Type of Service Needed"
+                    android:inputType="text"
+                    android:layout_marginTop="48dp" />
+
+                <EditText
+                    android:id="@+id/editTextPreferredServiceDatesTimes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Preferred Service Dates/Times"
+                    android:inputType="text"
+                    android:layout_marginTop="48dp" />
+
+                <EditText
+                    android:id="@+id/editTextDesiredServiceLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Desired Service Location (if different from home address)"
+                    android:inputType="text"
+                    android:layout_marginTop="48dp" />
+
+                <EditText
+                    android:id="@+id/editTextAdditionalInformation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Additional Information/Requests"
+                    android:inputType="textMultiLine"
+                    android:lines="4"
+                    android:layout_marginTop="48dp" />
+
+                <!-- Terms and Conditions -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Terms and Conditions"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textColor="@color/red_pink"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="48dp" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxAgree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I agree to the terms and conditions"
+                    android:layout_marginTop="48dp" />
+
+                <Button
+                    android:id="@+id/submitButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Submit"
+                    android:textSize="20sp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="submitForm"
+                    android:layout_marginTop="48dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp" />
+            </LinearLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
