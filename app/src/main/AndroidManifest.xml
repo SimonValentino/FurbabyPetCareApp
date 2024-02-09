@@ -27,6 +27,12 @@
         <activity
             android:name=".SignupActivity"
             android:exported="true"></activity>
+        <activity
+            android:name=".PetProfessionalSignupActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".PetOwnerSignupActivity"
+            android:exported="true"></activity>
     </application>
 
 </manifest>

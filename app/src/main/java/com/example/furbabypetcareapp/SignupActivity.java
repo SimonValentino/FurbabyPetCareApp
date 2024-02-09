@@ -7,11 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 public class SignupActivity extends AppCompatActivity {
     private EditText emailEditText;
     private EditText passwordEditText;
     private EditText confirmPasswordEditText;
+    private RadioGroup userTypeRadioGroup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,12 +24,14 @@ public class SignupActivity extends AppCompatActivity {
         emailEditText = findViewById(R.id.emailEditText);
         passwordEditText = findViewById(R.id.passwordEditText);
         confirmPasswordEditText = findViewById(R.id.confirmPasswordEditText);
+        userTypeRadioGroup = findViewById(R.id.userTypeRadioGroup);
     }
 
     public void continueSignup(View view) {
         String email = emailEditText.getText().toString();
         String password = passwordEditText.getText().toString();
         String confirmPassword = confirmPasswordEditText.getText().toString();
+        int selectedRadioButtonId = userTypeRadioGroup.getCheckedRadioButtonId();
 
         if (email.equals("") || password.equals("") || confirmPassword.equals("")) {
             alert("Missing information");
@@ -104,8 +109,13 @@ public class SignupActivity extends AppCompatActivity {
             return;
         }
 
-        Intent intent = new Intent(this, SignupDetails.class);
-        startActivity(intent);
+        if (selectedRadioButtonId == R.id.ownerRadioButtonSignup) {
+            Intent intent = new Intent(this, PetOwnerSignupActivity.class);
+            startActivity(intent);
+        } else if (selectedRadioButtonId == R.id.professionalRadioButtonSignup) {
+            Intent intent = new Intent(this, PetProfessionalSignupActivity.class);
+            startActivity(intent);
+        }
     }
 
     public void goToLogin(View view) {
