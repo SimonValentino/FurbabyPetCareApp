@@ -1,87 +1,264 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:background="#99E80078"
+    tools:context=".PetProfessionalSignupActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Personal Information"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="8dp"/>
-
-    <EditText
-        android:id="@+id/editTextFullName"
+    <LinearLayout
+        android:id="@+id/personalInfoLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Full Name"
-        android:inputType="textPersonName"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/editTextBusinessName"
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="146dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/furbaby_logo" />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/formCardView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Business Name (if applicable)"
-        android:inputType="text"
-        android:layout_marginBottom="16dp"/>
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/editTextContactEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Contact Email"
-        android:inputType="textEmailAddress"
-        android:layout_marginBottom="16dp"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/editTextContactPhoneNumber"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Contact Phone Number"
-        android:inputType="phone"
-        android:layout_marginBottom="16dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="30dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Business Address"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="8dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Professional Information"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textColor="@color/red_pink"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/editTextBusinessAddress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Business Address"
-        android:inputType="text"
-        android:layout_marginBottom="16dp"/>
+                <EditText
+                    android:id="@+id/editTextPetCareService"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Type of Pet Care Service Provided"
+                    android:inputType="text"
+                    android:layout_marginTop="48dp"/>
 
-    <EditText
-        android:id="@+id/editTextCity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="City"
-        android:inputType="text"
-        android:layout_marginBottom="16dp"/>
 
-    <EditText
-        android:id="@+id/editTextStateProvince"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="State/Province"
-        android:inputType="text"
-        android:layout_marginBottom="16dp"/>
+                <EditText
+                    android:id="@+id/editTextYearsOfExperience"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Years of Experience"
+                    android:inputType="number"
+                    android:layout_marginTop="48dp"/>
 
-    <EditText
-        android:id="@+id/editTextZipPostalCode"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Zip/Postal Code"
-        android:inputType="number"
-        android:layout_marginBottom="16dp"/>
-</LinearLayout>
+                <EditText
+                    android:id="@+id/editTextCertifications"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Certifications (please specify)"
+                    android:inputType="text"
+                    android:layout_marginTop="48dp"/>
+
+                <EditText
+                    android:id="@+id/editTextTraining"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Training (please specify)"
+                    android:inputType="text"
+                    android:layout_marginTop="48dp"/>
+
+                <EditText
+                    android:id="@+id/editTextLicenseNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="License Number (if applicable)"
+                    android:inputType="text"
+                    android:layout_marginTop="48dp"/>
+
+                <EditText
+                    android:id="@+id/editTextInsuranceProvider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Insurance Provider (if applicable)"
+                    android:inputType="text"
+                    android:layout_marginTop="48dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Background Check"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textColor="@color/red_pink"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="48dp"/>
+
+                <RadioGroup
+                    android:id="@+id/radioGroupBackgroundCheck"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes" />
+
+                    <RadioButton
+                        android:id="@+id/radioNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No" />
+                </RadioGroup>
+
+                <EditText
+                    android:id="@+id/editTextBackgroundCheckDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Details (if yes)"
+                    android:inputType="text"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="References"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textColor="@color/red_pink"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editTextReferenceName1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Reference 1 Name"
+                    android:inputType="text"
+                    android:layout_marginTop="48dp"/>
+
+                <EditText
+                    android:id="@+id/editTextReferenceEmail1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Reference 1 Email"
+                    android:inputType="textEmailAddress"
+                    android:layout_marginTop="48dp"/>
+
+                <EditText
+                    android:id="@+id/editTextReferencePhone1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Reference 1 Phone"
+                    android:inputType="phone"
+                    android:layout_marginTop="48dp"/>
+
+                <EditText
+                    android:id="@+id/editTextReferenceName2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Reference 2 Name"
+                    android:inputType="text"
+                    android:layout_marginTop="48dp"/>
+
+                <EditText
+                    android:id="@+id/editTextReferenceEmail2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Reference 2 Email"
+                    android:inputType="textEmailAddress"
+                    android:layout_marginTop="48dp"/>
+
+                <EditText
+                    android:id="@+id/editTextReferencePhone2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Reference 2 Phone"
+                    android:inputType="phone"
+                    android:layout_marginTop="48dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Service Details"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textColor="@color/red_pink"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editTextServiceDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Describe your pet care services and specializations"
+                    android:inputType="textMultiLine"
+                    android:lines="4"
+                    android:layout_marginTop="48dp"/>
+
+                <EditText
+                    android:id="@+id/editTextAvailability"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Availability (Days/Times)"
+                    android:inputType="text"
+                    android:layout_marginTop="48dp"/>
+
+                <EditText
+                    android:id="@+id/editTextServiceArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Service Area (Cities/Regions)"
+                    android:inputType="text"
+                    android:layout_marginTop="48dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Furbaby Bestie Terms and Conditions"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textColor="@color/red_pink"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="48dp"/>
+
+                <CheckBox
+                    android:id="@+id/checkBoxAgree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I agree to the terms and conditions"
+                    android:layout_marginTop="48dp"/>
+
+                <Button
+                    android:id="@+id/submitButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Submit"
+                    android:textSize="20sp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="submitForm"
+                    android:layout_marginTop="48dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp" />
+            </LinearLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
