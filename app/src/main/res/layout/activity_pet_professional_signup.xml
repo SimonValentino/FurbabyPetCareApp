@@ -50,13 +50,23 @@
                     android:textSize="40sp"
                     android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/editTextPetCareService"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/petCareServiceCardView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Type of Pet Care Service Provided"
-                    android:inputType="text"
-                    android:layout_marginTop="48dp"/>
+                    android:layout_marginTop="48dp"
+                    app:cardCornerRadius="0dp">
+
+
+
+                    <Spinner
+                        android:id="@+id/spinnerPetCareService"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:padding="10dp"/>
+
+                </androidx.cardview.widget.CardView>
 
 
                 <EditText

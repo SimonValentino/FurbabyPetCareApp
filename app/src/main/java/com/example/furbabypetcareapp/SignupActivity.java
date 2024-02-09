@@ -33,6 +33,7 @@ public class SignupActivity extends AppCompatActivity {
         String confirmPassword = confirmPasswordEditText.getText().toString();
         int selectedRadioButtonId = userTypeRadioGroup.getCheckedRadioButtonId();
 
+
         if (email.equals("") || password.equals("") || confirmPassword.equals("")) {
             alert("Missing information");
             clearPasswords();
