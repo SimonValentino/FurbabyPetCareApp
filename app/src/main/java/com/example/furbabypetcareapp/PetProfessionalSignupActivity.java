@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -17,44 +18,36 @@ public class PetProfessionalSignupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pet_professional_signup);
 
-        // Initialize the spinner
         Spinner spinnerPetCareService = findViewById(R.id.spinnerPetCareService);
-
-        // Define the array directly in Java
         String[] petCareServiceOptions = {
                 "Pet Sitting",
                 "Grooming",
                 "Training",
                 "Other"
         };
-
-        // Create an ArrayAdapter using the defined array and a default spinner layout
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(
+        ArrayAdapter<String> petCareServiceAdapter = new ArrayAdapter<>(
                 this,
                 android.R.layout.simple_spinner_item,
                 petCareServiceOptions
         );
+        petCareServiceAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerPetCareService.setAdapter(petCareServiceAdapter);
 
-        // Specify the layout to use when the list of choices appears
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        // Apply the adapter to the spinner
-        spinnerPetCareService.setAdapter(adapter);
-
-        // Handle spinner item selection
         spinnerPetCareService.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                // Handle the selected item
                 String selectedPetCareService = parentView.getItemAtPosition(position).toString();
-                // You can use the selectedPetCareService as needed
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parentView) {
-                // Do nothing here
             }
         });
+
+        AutoCompleteTextView autoCompleteServiceArea = findViewById(R.id.autoCompleteServiceArea);
+        String[] statesAndCities = getResources().getStringArray(R.array.states_and_cities);
+        ArrayAdapter<String> serviceAreaAdapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, statesAndCities);
+        autoCompleteServiceArea.setAdapter(serviceAreaAdapter);
     }
 
     public void submitForm(View view) {

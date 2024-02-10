@@ -75,6 +75,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Years of Experience"
                     android:inputType="number"
+                    android:maxLength="2"
                     android:layout_marginTop="48dp"/>
 
                 <EditText
@@ -229,8 +230,8 @@
                     android:inputType="text"
                     android:layout_marginTop="48dp"/>
 
-                <EditText
-                    android:id="@+id/editTextServiceArea"
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteServiceArea"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Service Area (Cities/Regions)"
