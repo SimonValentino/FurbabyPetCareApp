@@ -263,13 +263,6 @@
                     android:id="@+id/checkBoxAgree"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="48dp"
-                    android:text="I agree to the terms and conditions" />
-
-                <CheckBox
-                    android:id="@+id/checkBoxAgree"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="I agree to the terms and conditions"
                     android:layout_marginTop="48dp"/>
 
