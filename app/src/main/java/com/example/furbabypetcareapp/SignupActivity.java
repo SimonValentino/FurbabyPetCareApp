@@ -28,10 +28,19 @@ public class SignupActivity extends AppCompatActivity {
     }
 
     public void continueSignup(View view) {
+        int selectedRadioButtonId = userTypeRadioGroup.getCheckedRadioButtonId();
+        if (selectedRadioButtonId == R.id.ownerRadioButtonSignup) {
+            Intent intent = new Intent(this, PetOwnerSignupActivity.class);
+            startActivity(intent);
+        } else if (selectedRadioButtonId == R.id.professionalRadioButtonSignup) {
+            Intent intent = new Intent(this, PetProfessionalSignupActivity.class);
+            startActivity(intent);
+        }
+
         String email = emailEditText.getText().toString();
         String password = passwordEditText.getText().toString();
         String confirmPassword = confirmPasswordEditText.getText().toString();
-        int selectedRadioButtonId = userTypeRadioGroup.getCheckedRadioButtonId();
+        selectedRadioButtonId = userTypeRadioGroup.getCheckedRadioButtonId();
 
 
 //        if (email.equals("") || password.equals("") || confirmPassword.equals("")) {
@@ -110,13 +119,13 @@ public class SignupActivity extends AppCompatActivity {
 //            return;
 //        }
 
-        if (selectedRadioButtonId == R.id.ownerRadioButtonSignup) {
-            Intent intent = new Intent(this, PetOwnerSignupActivity.class);
-            startActivity(intent);
-        } else if (selectedRadioButtonId == R.id.professionalRadioButtonSignup) {
-            Intent intent = new Intent(this, PetProfessionalSignupActivity.class);
-            startActivity(intent);
-        }
+//        if (selectedRadioButtonId == R.id.ownerRadioButtonSignup) {
+//            Intent intent = new Intent(this, PetOwnerSignupActivity.class);
+//            startActivity(intent);
+//        } else if (selectedRadioButtonId == R.id.professionalRadioButtonSignup) {
+//            Intent intent = new Intent(this, PetProfessionalSignupActivity.class);
+//            startActivity(intent);
+//        }
     }
 
     public void goToLogin(View view) {

@@ -40,192 +40,204 @@
                     android:id="@+id/editTextFullName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:hint="Full Name"
-                    android:inputType="textPersonName"
-                    android:layout_marginTop="48dp" />
+                    android:inputType="textPersonName" />
 
                 <EditText
                     android:id="@+id/editTextEmailAddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:hint="Email Address"
-                    android:inputType="textEmailAddress"
-                    android:layout_marginTop="48dp" />
+                    android:inputType="textEmailAddress" />
 
                 <EditText
                     android:id="@+id/editTextContactPhoneNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:hint="Contact Phone Number"
-                    android:inputType="phone"
-                    android:layout_marginTop="48dp" />
+                    android:inputType="phone" />
 
                 <EditText
                     android:id="@+id/editTextHomeAddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:hint="Home Address"
-                    android:inputType="text"
-                    android:layout_marginTop="48dp" />
+                    android:inputType="text" />
 
                 <EditText
                     android:id="@+id/editTextCity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:hint="City"
-                    android:inputType="text"
-                    android:layout_marginTop="48dp" />
+                    android:inputType="text" />
 
                 <EditText
                     android:id="@+id/editTextStateProvince"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:hint="State/Province"
-                    android:inputType="text"
-                    android:layout_marginTop="48dp" />
+                    android:inputType="text" />
 
                 <EditText
                     android:id="@+id/editTextZipPostalCode"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:hint="Zip/Postal Code"
-                    android:inputType="text"
-                    android:layout_marginTop="48dp" />
+                    android:inputType="text" />
 
                 <!-- Pet Information Fields -->
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:text="Pet Information"
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                     android:textColor="@color/red_pink"
                     android:textSize="40sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="48dp" />
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/editTextPetsName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:hint="Pet’s Name(s)"
-                    android:inputType="text"
-                    android:layout_marginTop="48dp" />
+                    android:inputType="text" />
 
                 <EditText
                     android:id="@+id/editTextTypeOfPets"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:hint="Type(s) of Pet(s)"
-                    android:inputType="text"
-                    android:layout_marginTop="48dp" />
+                    android:inputType="text" />
 
                 <EditText
                     android:id="@+id/editTextBreeds"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:hint="Breed(s) (if applicable)"
-                    android:inputType="text"
-                    android:layout_marginTop="48dp" />
+                    android:inputType="text" />
 
                 <EditText
                     android:id="@+id/editTextAges"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:hint="Age(s)"
-                    android:inputType="text"
-                    android:layout_marginTop="48dp" />
+                    android:inputType="text" />
 
                 <EditText
                     android:id="@+id/editTextSpecialNeeds"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:hint="Special Needs/Requirements"
-                    android:inputType="text"
-                    android:layout_marginTop="48dp" />
+                    android:inputType="text" />
 
                 <EditText
                     android:id="@+id/editTextVaccinationDetails"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:hint="Vaccination Details"
-                    android:inputType="text"
-                    android:layout_marginTop="48dp" />
+                    android:inputType="text" />
 
                 <!-- Service Details Fields -->
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:text="Service Details"
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                     android:textColor="@color/red_pink"
                     android:textSize="40sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="48dp" />
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/editTextTypeOfServiceNeeded"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:hint="Type of Service Needed"
-                    android:inputType="text"
-                    android:layout_marginTop="48dp" />
+                    android:inputType="text" />
 
                 <EditText
                     android:id="@+id/editTextPreferredServiceDatesTimes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:hint="Preferred Service Dates/Times"
-                    android:inputType="text"
-                    android:layout_marginTop="48dp" />
+                    android:inputType="text" />
 
                 <EditText
                     android:id="@+id/editTextDesiredServiceLocation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:hint="Desired Service Location (if different from home address)"
-                    android:inputType="text"
-                    android:layout_marginTop="48dp" />
+                    android:inputType="text" />
 
                 <EditText
                     android:id="@+id/editTextAdditionalInformation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:hint="Additional Information/Requests"
                     android:inputType="textMultiLine"
-                    android:lines="4"
-                    android:layout_marginTop="48dp" />
+                    android:lines="4" />
 
                 <!-- Terms and Conditions -->
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:text="Terms and Conditions"
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                     android:textColor="@color/red_pink"
                     android:textSize="40sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="48dp" />
+                    android:textStyle="bold" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:text="@string/terms_and_conditions" />
+                </ScrollView>
 
                 <CheckBox
                     android:id="@+id/checkBoxAgree"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="I agree to the terms and conditions"
-                    android:layout_marginTop="48dp" />
+                    android:layout_marginTop="48dp"
+                    android:text="I agree to the terms and conditions" />
 
                 <Button
                     android:id="@+id/submitButton"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:text="Submit"
-                    android:textSize="20sp"
+                    android:layout_marginTop="48dp"
                     android:clickable="true"
                     android:focusable="true"
                     android:onClick="submitForm"
-                    android:layout_marginTop="48dp" />
+                    android:text="Submit"
+                    android:textSize="20sp" />
 
                 <View
                     android:layout_width="match_parent"
