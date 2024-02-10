@@ -58,13 +58,12 @@
                     app:cardCornerRadius="0dp">
 
 
-
                     <Spinner
                         android:id="@+id/spinnerPetCareService"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
-                        android:padding="10dp"/>
+                        android:padding="10dp" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -73,51 +72,51 @@
                     android:id="@+id/editTextYearsOfExperience"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:hint="Years of Experience"
-                    android:inputType="number"
-                    android:layout_marginTop="48dp"/>
+                    android:inputType="number" />
 
                 <EditText
                     android:id="@+id/editTextCertifications"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:hint="Certifications (please specify)"
-                    android:inputType="text"
-                    android:layout_marginTop="48dp"/>
+                    android:inputType="text" />
 
                 <EditText
                     android:id="@+id/editTextTraining"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:hint="Training (please specify)"
-                    android:inputType="text"
-                    android:layout_marginTop="48dp"/>
+                    android:inputType="text" />
 
                 <EditText
                     android:id="@+id/editTextLicenseNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:hint="License Number (if applicable)"
-                    android:inputType="text"
-                    android:layout_marginTop="48dp"/>
+                    android:inputType="text" />
 
                 <EditText
                     android:id="@+id/editTextInsuranceProvider"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:hint="Insurance Provider (if applicable)"
-                    android:inputType="text"
-                    android:layout_marginTop="48dp"/>
+                    android:inputType="text" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:text="Background Check"
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                     android:textColor="@color/red_pink"
                     android:textSize="40sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="48dp"/>
+                    android:textStyle="bold" />
 
                 <RadioGroup
                     android:id="@+id/radioGroupBackgroundCheck"
@@ -147,6 +146,10 @@
                     android:visibility="gone" />
 
                 <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"></TextView>
+
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="References"
@@ -155,53 +158,65 @@
                     android:textSize="40sp"
                     android:textStyle="bold" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="(optional)"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textSize="20sp" />
+
                 <EditText
                     android:id="@+id/editTextReferenceName1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:hint="Reference 1 Name"
-                    android:inputType="text"
-                    android:layout_marginTop="48dp"/>
+                    android:inputType="text" />
 
                 <EditText
                     android:id="@+id/editTextReferenceEmail1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:hint="Reference 1 Email"
-                    android:inputType="textEmailAddress"
-                    android:layout_marginTop="48dp"/>
+                    android:inputType="textEmailAddress" />
 
                 <EditText
                     android:id="@+id/editTextReferencePhone1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:hint="Reference 1 Phone"
-                    android:inputType="phone"
-                    android:layout_marginTop="48dp"/>
+                    android:inputType="phone" />
 
                 <EditText
                     android:id="@+id/editTextReferenceName2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:hint="Reference 2 Name"
-                    android:inputType="text"
-                    android:layout_marginTop="48dp"/>
+                    android:inputType="text" />
 
                 <EditText
                     android:id="@+id/editTextReferenceEmail2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:hint="Reference 2 Email"
-                    android:inputType="textEmailAddress"
-                    android:layout_marginTop="48dp"/>
+                    android:inputType="textEmailAddress" />
 
                 <EditText
                     android:id="@+id/editTextReferencePhone2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:hint="Reference 2 Phone"
-                    android:inputType="phone"
-                    android:layout_marginTop="48dp"/>
+                    android:inputType="phone" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"></TextView>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -216,26 +231,26 @@
                     android:id="@+id/editTextServiceDescription"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:hint="Describe your pet care services and specializations"
                     android:inputType="textMultiLine"
-                    android:lines="4"
-                    android:layout_marginTop="48dp"/>
+                    android:lines="4" />
 
                 <EditText
                     android:id="@+id/editTextAvailability"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:hint="Availability (Days/Times)"
-                    android:inputType="text"
-                    android:layout_marginTop="48dp"/>
+                    android:inputType="text" />
 
                 <EditText
                     android:id="@+id/editTextServiceArea"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
                     android:hint="Service Area (Cities/Regions)"
-                    android:inputType="text"
-                    android:layout_marginTop="48dp"/>
+                    android:inputType="text" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -263,19 +278,19 @@
                     android:id="@+id/checkBoxAgree"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="I agree to the terms and conditions"
-                    android:layout_marginTop="48dp"/>
+                    android:layout_marginTop="48dp"
+                    android:text="I agree to the terms and conditions" />
 
                 <Button
                     android:id="@+id/submitButton"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:text="Submit"
-                    android:textSize="20sp"
+                    android:layout_marginTop="48dp"
                     android:clickable="true"
                     android:focusable="true"
                     android:onClick="submitForm"
-                    android:layout_marginTop="48dp"/>
+                    android:text="Submit"
+                    android:textSize="20sp" />
 
                 <View
                     android:layout_width="match_parent"
