@@ -43,81 +43,81 @@ public class SignupActivity extends AppCompatActivity {
         selectedRadioButtonId = userTypeRadioGroup.getCheckedRadioButtonId();
 
 
-        if (email.equals("") || password.equals("") || confirmPassword.equals("")) {
-            alert("Missing information");
-            clearPasswords();
-            return;
-        }
-
-        if (!isValidEmail(email)) {
-            alert("Invalid email address.");
-            clearPasswords();
-            return;
-        }
-
-        if (password.isEmpty() || confirmPassword.isEmpty()) {
-            alert("Password fields cannot be empty.");
-            clearPasswords();
-            return;
-        }
-
-        if (!password.equals(confirmPassword)) {
-            alert("Passwords do not match.");
-            clearPasswords();
-            return;
-        }
-
-        /*
-        Checking if password is "Strong"
-
-        Current requirements
-        --------------------
-        Digit
-        Uppercase letter
-        Lowercase letter
-        Special character
-         */
-        if (password.length() < 8) {
-            alert("Password must be at least 8 characters");
-            return;
-        }
-
-        boolean hasDigit = false;
-        boolean hasUpperCase = false;
-        boolean hasLowerCase = false;
-        boolean hasSpecialCharacter = false;
-
-        for (int i = 0; i < password.length(); i++) {
-            char c = password.charAt(i);
-
-            if (Character.isDigit(c)) {
-                hasDigit = true;
-            } else if (Character.isUpperCase(c)) {
-                hasUpperCase = true;
-            } else if (Character.isLowerCase(c)) {
-                hasLowerCase = true;
-            } else if (!Character.isLetterOrDigit(c)) {
-                hasSpecialCharacter = true;
-            }
-        }
-
-        if (!hasDigit) {
-            alert("Password must have at least one digit");
-            clearPasswords();
-            return;
-        } else if (!hasUpperCase) {
-            alert("Password must have at least one upper case letter");
-            clearPasswords();
-            return;
-        } else if (!hasLowerCase) {
-            alert("Password must have at least one lower case letter");
-            clearPasswords();
-            return;
-        } else if (!hasSpecialCharacter) {
-            alert("Password must have at least one special character");
-            clearPasswords();
-            return;
-        }
+//        if (email.equals("") || password.equals("") || confirmPassword.equals("")) {
+//            alert("Missing information");
+//            clearPasswords();
+//            return;
+//        }
+//
+//        if (!isValidEmail(email)) {
+//            alert("Invalid email address.");
+//            clearPasswords();
+//            return;
+//        }
+//
+//        if (password.isEmpty() || confirmPassword.isEmpty()) {
+//            alert("Password fields cannot be empty.");
+//            clearPasswords();
+//            return;
+//        }
+//
+//        if (!password.equals(confirmPassword)) {
+//            alert("Passwords do not match.");
+//            clearPasswords();
+//            return;
+//        }
+//
+//        /*
+//        Checking if password is "Strong"
+//
+//        Current requirements
+//        --------------------
+//        Digit
+//        Uppercase letter
+//        Lowercase letter
+//        Special character
+//         */
+//        if (password.length() < 8) {
+//            alert("Password must be at least 8 characters");
+//            return;
+//        }
+//
+//        boolean hasDigit = false;
+//        boolean hasUpperCase = false;
+//        boolean hasLowerCase = false;
+//        boolean hasSpecialCharacter = false;
+//
+//        for (int i = 0; i < password.length(); i++) {
+//            char c = password.charAt(i);
+//
+//            if (Character.isDigit(c)) {
+//                hasDigit = true;
+//            } else if (Character.isUpperCase(c)) {
+//                hasUpperCase = true;
+//            } else if (Character.isLowerCase(c)) {
+//                hasLowerCase = true;
+//            } else if (!Character.isLetterOrDigit(c)) {
+//                hasSpecialCharacter = true;
+//            }
+//        }
+//
+//        if (!hasDigit) {
+//            alert("Password must have at least one digit");
+//            clearPasswords();
+//            return;
+//        } else if (!hasUpperCase) {
+//            alert("Password must have at least one upper case letter");
+//            clearPasswords();
+//            return;
+//        } else if (!hasLowerCase) {
+//            alert("Password must have at least one lower case letter");
+//            clearPasswords();
+//            return;
+//        } else if (!hasSpecialCharacter) {
+//            alert("Password must have at least one special character");
+//            clearPasswords();
+//            return;
+//        }
 
 //        if (selectedRadioButtonId == R.id.ownerRadioButtonSignup) {
 //            Intent intent = new Intent(this, PetOwnerSignupActivity.class);
