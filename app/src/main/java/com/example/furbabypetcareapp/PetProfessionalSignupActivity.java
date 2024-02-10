@@ -15,9 +15,10 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class PetProfessionalSignupActivity extends AppCompatActivity {
-    private EditText editTextYearsOfExperience, editTextCertifications, editTextTraining, editTextLicenseNumber, editTextInsuranceProvider, editTextServiceDescription, editTextAvailability, editTextServiceArea, editTextReferenceName1, editTextReferenceEmail1, editTextReferencePhone1, editTextReferenceName2, editTextReferenceEmail2, editTextReferencePhone2;
+    private EditText editTextYearsOfExperience, editTextCertifications, editTextTraining, editTextLicenseNumber, editTextInsuranceProvider, editTextServiceDescription, editTextAvailability, editTextReferenceName1, editTextReferenceEmail1, editTextReferencePhone1, editTextReferenceName2, editTextReferenceEmail2, editTextReferencePhone2;
     private CheckBox checkBoxAgree;
     private RadioGroup radioGroupBackgroundCheck;
+    private AutoCompleteTextView autoCompleteServiceArea;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +32,6 @@ public class PetProfessionalSignupActivity extends AppCompatActivity {
         editTextInsuranceProvider = findViewById(R.id.editTextInsuranceProvider);
         editTextServiceDescription = findViewById(R.id.editTextServiceDescription);
         editTextAvailability = findViewById(R.id.editTextAvailability);
-        editTextServiceArea = findViewById(R.id.editTextServiceArea);
         checkBoxAgree = findViewById(R.id.checkBoxAgree);
         radioGroupBackgroundCheck = findViewById(R.id.radioGroupBackgroundCheck);
         editTextReferenceName1 = findViewById(R.id.editTextReferenceName1);
@@ -40,6 +40,7 @@ public class PetProfessionalSignupActivity extends AppCompatActivity {
         editTextReferenceName2 = findViewById(R.id.editTextReferenceName2);
         editTextReferenceEmail2 = findViewById(R.id.editTextReferenceEmail2);
         editTextReferencePhone2 = findViewById(R.id.editTextReferencePhone2);
+        autoCompleteServiceArea = findViewById(R.id.autoCompleteServiceArea);
 
         Spinner spinnerPetCareService = findViewById(R.id.spinnerPetCareService);
         String[] petCareServiceOptions = {
@@ -50,7 +51,6 @@ public class PetProfessionalSignupActivity extends AppCompatActivity {
         };
 
         ArrayAdapter<String> petCareServiceAdapter = new ArrayAdapter<>(
-                = new ArrayAdapter<>(
                 this,
                 android.R.layout.simple_spinner_item,
                 petCareServiceOptions
@@ -73,7 +73,6 @@ public class PetProfessionalSignupActivity extends AppCompatActivity {
             }
         });
 
-        AutoCompleteTextView autoCompleteServiceArea = findViewById(R.id.autoCompleteServiceArea);
         String[] statesAndCities = getResources().getStringArray(R.array.states_and_cities);
         ArrayAdapter<String> serviceAreaAdapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, statesAndCities);
         autoCompleteServiceArea.setAdapter(serviceAreaAdapter);
@@ -95,7 +94,7 @@ public class PetProfessionalSignupActivity extends AppCompatActivity {
                 !isEmpty(editTextTraining) &&
                 !isEmpty(editTextServiceDescription) &&
                 !isEmpty(editTextAvailability) &&
-                !isEmpty(editTextServiceArea) &&
+                !isEmpty(autoCompleteServiceArea) &&
                 checkBoxAgree.isChecked() &&
                 radioGroupBackgroundCheck.getCheckedRadioButtonId() != -1;
     }
