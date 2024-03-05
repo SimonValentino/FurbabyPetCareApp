@@ -79,7 +79,8 @@ public class DetailedSignupActivity extends AppCompatActivity {
     }
 
     public void submitForm(View view) {
-        if (validateForm()) {
+        boolean validateInfo = false;
+        if (validateInfo && validateForm()) {
             alert("Form submitted successfully");
             Intent intent = new Intent(this, LogInActivity.class);
             startActivity(intent);

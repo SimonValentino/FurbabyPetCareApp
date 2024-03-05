@@ -9,7 +9,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class SignupActivity extends AppCompatActivity {
-    private final boolean validateInfo = false;
     private EditText emailEditText;
     private EditText passwordEditText;
     private EditText confirmPasswordEditText;
@@ -29,6 +28,7 @@ public class SignupActivity extends AppCompatActivity {
         String password = passwordEditText.getText().toString();
         String confirmPassword = confirmPasswordEditText.getText().toString();
 
+        boolean validateInfo = false;
         if (validateInfo) {
             if (email.equals("") || password.equals("") || confirmPassword.equals("")) {
                 alert("Missing information");
