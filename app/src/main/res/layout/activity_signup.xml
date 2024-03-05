@@ -110,30 +110,31 @@
                     android:drawableEnd="@drawable/password_icon"
                     android:inputType="textPassword" />
 
-                <RadioGroup
-                    android:id="@+id/userTypeRadioGroup"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginBottom="16dp">
+<!--                <RadioGroup-->
+<!--                    android:id="@+id/userTypeRadioGroup"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    android:layout_marginBottom="16dp">-->
 
-                    <RadioButton
-                        android:id="@+id/professionalRadioButtonSignup"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:checked="true"
-                        android:text="Pet Care Professional" />
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/professionalRadioButtonSignup"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:checked="true"-->
+<!--                        android:text="Pet Care Professional" />-->
 
-                    <RadioButton
-                        android:id="@+id/ownerRadioButtonSignup"
-                        android:layout_width="183dp"
-                        android:layout_height="wrap_content"
-                        android:text="Pet Owner" />
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/ownerRadioButtonSignup"-->
+<!--                        android:layout_width="183dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Pet Owner" />-->
 
-                </RadioGroup>
+<!--                </RadioGroup>-->
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="15dp" />
