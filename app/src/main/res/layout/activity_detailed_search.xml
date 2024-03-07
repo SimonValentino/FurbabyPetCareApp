@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#99E80078"
-    tools:context=".PetOwnerSignupActivity">
+    tools:context=".DetailedSearchActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/formCardView"

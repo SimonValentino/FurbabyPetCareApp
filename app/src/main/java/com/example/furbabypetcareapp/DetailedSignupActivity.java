@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class PetProfessionalSignupActivity extends AppCompatActivity {
+public class DetailedSignupActivity extends AppCompatActivity {
     private EditText editTextYearsOfExperience, editTextCertifications, editTextTraining, editTextLicenseNumber, editTextInsuranceProvider, editTextServiceDescription, editTextAvailability, editTextReferenceName1, editTextReferenceEmail1, editTextReferencePhone1, editTextReferenceName2, editTextReferenceEmail2, editTextReferencePhone2;
     private CheckBox checkBoxAgree;
     private RadioGroup radioGroupBackgroundCheck;
@@ -23,7 +23,7 @@ public class PetProfessionalSignupActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pet_professional_signup);
+        setContentView(R.layout.activity_detailed_signup);
 
         editTextYearsOfExperience = findViewById(R.id.editTextYearsOfExperience);
         editTextCertifications = findViewById(R.id.editTextCertifications);
@@ -79,7 +79,8 @@ public class PetProfessionalSignupActivity extends AppCompatActivity {
     }
 
     public void submitForm(View view) {
-        if (validateForm()) {
+        boolean validateInfo = false;
+        if (validateInfo && validateForm()) {
             alert("Form submitted successfully");
             Intent intent = new Intent(this, LogInActivity.class);
             startActivity(intent);

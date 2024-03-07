@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#99E80078"
-    tools:context=".PetProfessionalSignupActivity">
+    tools:context=".DetailedSignupActivity">
 
     <LinearLayout
         android:id="@+id/personalInfoLayout"
@@ -232,11 +232,11 @@
                 <EditText
                     android:id="@+id/editTextServiceDescription"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="48dp"
                     android:hint="Describe your pet care services and specializations"
                     android:inputType="textMultiLine"
-                    android:lines="4"
-                    android:layout_marginTop="48dp"/>
+                    android:lines="4" />
 
                 <EditText
                     android:id="@+id/editTextAvailability"
