@@ -28,212 +28,27 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Personal Information"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textColor="@color/red_pink"
-                    android:textSize="40sp"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/editTextFullName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="48dp"
-                    android:hint="Full Name"
-                    android:inputType="textPersonName" />
-
-                <EditText
-                    android:id="@+id/editTextEmailAddress"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="48dp"
-                    android:hint="Email Address"
-                    android:inputType="textEmailAddress" />
-
-                <EditText
-                    android:id="@+id/editTextContactPhoneNumber"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="48dp"
-                    android:hint="Contact Phone Number"
-                    android:inputType="phone" />
-
-                <EditText
-                    android:id="@+id/editTextHomeAddress"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="48dp"
-                    android:hint="Home Address"
-                    android:inputType="text" />
-
-                <EditText
-                    android:id="@+id/editTextCity"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="48dp"
-                    android:hint="City"
-                    android:inputType="text" />
-
-                <EditText
-                    android:id="@+id/editTextStateProvince"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="48dp"
-                    android:hint="State/Province"
-                    android:inputType="text" />
-
-                <EditText
-                    android:id="@+id/editTextZipPostalCode"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="48dp"
-                    android:hint="Zip/Postal Code"
-                    android:inputType="text" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="48dp"
                     android:text="Pet Information"
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                     android:textColor="@color/red_pink"
                     android:textSize="40sp"
                     android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/editTextPetsName"
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="48dp"
-                    android:hint="Pet’s Name(s)"
-                    android:inputType="text" />
+                    android:layout_margin="16dp"
+                    android:hint="Select pet type(s)"
+                    android:onClick="dropdownMenu">
 
-                <EditText
-                    android:id="@+id/editTextTypeOfPets"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="48dp"
-                    android:hint="Type(s) of Pet(s)"
-                    android:inputType="text" />
-
-                <EditText
-                    android:id="@+id/editTextBreeds"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="48dp"
-                    android:hint="Breed(s) (if applicable)"
-                    android:inputType="text" />
-
-                <EditText
-                    android:id="@+id/editTextAges"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="48dp"
-                    android:hint="Age(s)"
-                    android:inputType="text" />
-
-                <EditText
-                    android:id="@+id/editTextSpecialNeeds"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="48dp"
-                    android:hint="Special Needs/Requirements"
-                    android:inputType="text" />
-
-                <EditText
-                    android:id="@+id/editTextVaccinationDetails"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="48dp"
-                    android:hint="Vaccination Details"
-                    android:inputType="text" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="48dp"
-                    android:text="Service Details"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textColor="@color/red_pink"
-                    android:textSize="40sp"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/editTextTypeOfServiceNeeded"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="48dp"
-                    android:hint="Type of Service Needed"
-                    android:inputType="text" />
-
-                <EditText
-                    android:id="@+id/editTextPreferredServiceDatesTimes"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="48dp"
-                    android:hint="Preferred Service Dates/Times"
-                    android:inputType="text" />
-
-                <EditText
-                    android:id="@+id/editTextDesiredServiceLocation"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="48dp"
-                    android:hint="Desired Service Location (if different from home address)"
-                    android:inputType="text" />
-
-                <EditText
-                    android:id="@+id/editTextAdditionalInformation"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="48dp"
-                    android:hint="Additional Information/Requests"
-                    android:inputType="textMultiLine"
-                    android:lines="4" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="48dp"
-                    android:text="Terms and Conditions"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textColor="@color/red_pink"
-                    android:textSize="40sp"
-                    android:textStyle="bold" />
-
-                <ScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:layout_marginTop="16dp">
-
-                    <TextView
+                    <AutoCompleteTextView
+                        android:id="@+id/autoCompleteText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="16dp"
-                        android:text="@string/terms_and_conditions" />
-                </ScrollView>
-
-                <CheckBox
-                    android:id="@+id/checkBoxAgree"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="48dp"
-                    android:text="I agree to the terms and conditions" />
-
-                <Button
-                    android:id="@+id/submitButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="48dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:onClick="submitForm"
-                    android:text="Submit"
-                    android:textSize="20sp" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="25dp" />
+                        android:inputType="none">
+                    </AutoCompleteTextView>
+                </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
         </ScrollView>
     </androidx.cardview.widget.CardView>
