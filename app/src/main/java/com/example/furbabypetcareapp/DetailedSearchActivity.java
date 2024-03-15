@@ -42,7 +42,6 @@ public class DetailedSearchActivity extends AppCompatActivity {
         petWeightEditText = findViewById(R.id.petWeightEditText);
         petAgeEditText = findViewById(R.id.petAgeEditText);
 
-        // Setup TimePickerDialog for service times
         Button timePickerButton = findViewById(R.id.timePickerButton);
         timePickerButton.setOnClickListener(new View.OnClickListener() {
             @Override

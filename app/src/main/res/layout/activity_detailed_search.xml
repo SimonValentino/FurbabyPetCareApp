@@ -59,6 +59,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:hint="Pet Weight (lbs)">
+
                     <EditText
                         android:id="@+id/petWeightEditText"
                         android:layout_width="match_parent"
@@ -85,7 +86,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="16dp"
-                    android:hint="Location">
+                    android:hint="    Location">
 
                     <AutoCompleteTextView
                         android:id="@+id/locationAutoComplete"
@@ -148,7 +149,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Select Service Time"/>
+                    android:onClick="setTime"
+                    android:text="Select Service Time" />
+
+                <TextView
+                    android:id="@+id/selectedTimeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="No time selected"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
             </LinearLayout>
         </ScrollView>
     </androidx.cardview.widget.CardView>
