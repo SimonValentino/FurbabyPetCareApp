@@ -4,23 +4,18 @@ import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.EditText;
-import android.widget.TimePicker;
-import android.widget.Toast;
+import android.widget.*;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.timepicker.MaterialTimePicker;
+import com.google.android.material.timepicker.TimeFormat;
+
 import java.util.Calendar;
+import java.util.Locale;
 
 public class DetailedSearchActivity extends AppCompatActivity {
-    String[] petTypes = {"Dog", "Cat"};
-
-    String[] locationSuggestions = getResources().getStringArray(R.array.states_and_cities);
+    String[] petTypes = {"Dog", "Cat"}, locationSuggestions;
 
     AutoCompleteTextView autoCompleteTextView, locationAutoCompleteTextView;
     EditText petWeightEditText, petAgeEditText;
@@ -30,6 +25,8 @@ public class DetailedSearchActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detailed_search);
+
+        locationSuggestions = getResources().getStringArray(R.array.states_and_cities);
 
         autoCompleteTextView = findViewById(R.id.autoCompleteText);
         arrayAdapter = new ArrayAdapter<>(this, R.layout.list_item, petTypes);
@@ -43,24 +40,32 @@ public class DetailedSearchActivity extends AppCompatActivity {
         petAgeEditText = findViewById(R.id.petAgeEditText);
 
         Button timePickerButton = findViewById(R.id.timePickerButton);
-        timePickerButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Calendar currentTime = Calendar.getInstance();
-                int hour = currentTime.get(Calendar.HOUR_OF_DAY);
-                int minute = currentTime.get(Calendar.MINUTE);
-                TimePickerDialog timePicker;
-                timePicker = new TimePickerDialog(DetailedSearchActivity.this, new TimePickerDialog.OnTimeSetListener() {
-                    @Override
-                    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                        alert("Selected Time: " + hourOfDay + ":" + minute);
-                    }
-                }, hour, minute, true); // True for 24 hour time
-                timePicker.setTitle("Select Service Time");
-                timePicker.show();
-            }
+    }
+
+    public void showTimePicker(View view) {
+        final Calendar c = Calendar.getInstance();
+        int hour = c.get(Calendar.HOUR_OF_DAY);
+        int minute = c.get(Calendar.MINUTE);
+
+        MaterialTimePicker picker = new MaterialTimePicker.Builder()
+                .setTimeFormat(TimeFormat.CLOCK_24H)
+                .setHour(hour)
+                .setMinute(minute)
+                .setTitleText("Select Service Time")
+                .build();
+
+        picker.show(getSupportFragmentManager(), "tag");
+
+        picker.addOnPositiveButtonClickListener(dialog -> {
+            int selectedHour = picker.getHour();
+            int selectedMinute = picker.getMinute();
+
+            String selectedTime = String.format(Locale.getDefault(), "%02d:%02d", selectedHour, selectedMinute);
+            TextView selectedTimeTextView = findViewById(R.id.selectedTimeTextView);
+            selectedTimeTextView.setText("Selected Time: " + selectedTime);
         });
     }
+
 
     public void submitForm(View view) {
         // Implement form submission logic here
