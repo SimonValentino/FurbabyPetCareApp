@@ -1,8 +1,6 @@
 package com.example.furbabypetcareapp;
 
 
-
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -23,15 +21,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class SignupActivity extends AppCompatActivity {
-     EditText emailEditText;
-     EditText passwordEditText;
-     EditText confirmPasswordEditText;
-
+    EditText emailEditText;
+    EditText passwordEditText;
+    EditText confirmPasswordEditText;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
 
 
         super.onCreate(savedInstanceState);
@@ -49,7 +45,7 @@ public class SignupActivity extends AppCompatActivity {
         String confirmPassword = confirmPasswordEditText.getText().toString();
 
         RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-        String url ="http://192.168.1.191/login-registration-android/register.php";
+        String url = "http://192.168.1.191/login-registration-android/register.php";
 
         Log.i("continueSignup", "continueSignup");
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
@@ -57,13 +53,12 @@ public class SignupActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         if (response.equals("success")) {
-                            Toast.makeText(getApplicationContext(),"Registration successful", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Registration successful", Toast.LENGTH_SHORT).show();
                             Log.i("Submission success", "Submission success");
                             Intent intent = new Intent(getApplicationContext(), LogInActivity.class);
                             startActivity(intent);
                             finish();
-                        }
-                        else {
+                        } else {
                             Log.i("response", response);
                         }
                     }
@@ -73,8 +68,8 @@ public class SignupActivity extends AppCompatActivity {
                 Log.i("Submission failed", "Submission failed");
                 Log.i("adada", error.toString());
             }
-        }){
-            protected Map<String, String> getParams(){
+        }) {
+            protected Map<String, String> getParams() {
                 Map<String, String> paramV = new HashMap<>();
                 paramV.put("email", email);
                 paramV.put("password", password);
@@ -82,8 +77,6 @@ public class SignupActivity extends AppCompatActivity {
             }
         };
         queue.add(stringRequest);
-
-
 
 
         boolean validateInfo = false;
@@ -165,8 +158,6 @@ public class SignupActivity extends AppCompatActivity {
             }
         }
 
-        Intent intent = new Intent(this, DetailedSignupActivity.class);
-        startActivity(intent);
     }
 
     public void goToLogin(View view) {

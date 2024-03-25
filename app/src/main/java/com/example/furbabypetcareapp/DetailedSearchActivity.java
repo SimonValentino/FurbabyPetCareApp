@@ -13,11 +13,13 @@ public class DetailedSearchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detailed_search);
     }
+
     public void submitForm(View view) {
         alert("Code for Submitting form successfully");
         Intent intent = new Intent(this, LogInActivity.class);
         startActivity(intent);
     }
+
     public void alert(String message) {
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
     }
