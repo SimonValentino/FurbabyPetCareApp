@@ -31,11 +31,11 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:cardCornerRadius="36dp"
             android:layout_marginBottom="-33dp"
+            android:clickable="true"
             android:focusable="true"
-            android:clickable="true">
+            app:cardCornerRadius="36dp"
+            app:layout_constraintBottom_toBottomOf="parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -110,30 +110,30 @@
                     android:drawableEnd="@drawable/password_icon"
                     android:inputType="textPassword" />
 
-<!--                <RadioGroup-->
-<!--                    android:id="@+id/userTypeRadioGroup"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:orientation="horizontal"-->
-<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    android:layout_marginBottom="16dp">-->
+                <!--                <RadioGroup-->
+                <!--                    android:id="@+id/userTypeRadioGroup"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:orientation="horizontal"-->
+                <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    android:layout_marginBottom="16dp">-->
 
-<!--                    <RadioButton-->
-<!--                        android:id="@+id/professionalRadioButtonSignup"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:checked="true"-->
-<!--                        android:text="Pet Care Professional" />-->
+                <!--                    <RadioButton-->
+                <!--                        android:id="@+id/professionalRadioButtonSignup"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:checked="true"-->
+                <!--                        android:text="Pet Care Professional" />-->
 
-<!--                    <RadioButton-->
-<!--                        android:id="@+id/ownerRadioButtonSignup"-->
-<!--                        android:layout_width="183dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:text="Pet Owner" />-->
+                <!--                    <RadioButton-->
+                <!--                        android:id="@+id/ownerRadioButtonSignup"-->
+                <!--                        android:layout_width="183dp"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:text="Pet Owner" />-->
 
-<!--                </RadioGroup>-->
+                <!--                </RadioGroup>-->
 
                 <View
                     android:layout_width="match_parent"
@@ -143,11 +143,11 @@
                     android:id="@+id/signUpButton"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:text="Continue"
-                    android:textSize="20sp"
                     android:clickable="true"
                     android:focusable="true"
-                    android:onClick="continueSignup" />
+                    android:onClick="continueSignup"
+                    android:text="Continue"
+                    android:textSize="20sp" />
 
                 <Button
                     android:id="@+id/loginButton"
